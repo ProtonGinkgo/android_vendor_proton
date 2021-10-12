@@ -23,3 +23,8 @@ ifneq ($(PRODUCT_OVERRIDE_FINGERPRINT),)
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.stock_fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT)
 endif
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/proton/backuptool/backuptool.sh:install/bin/backuptool.sh \
+    vendor/proton/backuptool/backuptool.functions:install/bin/backuptool.functions
